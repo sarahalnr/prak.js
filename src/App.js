@@ -1,61 +1,3 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-// function App() {
-//   const biodataArray = [
-//     { field: "Nama", value: "Sarah Isnaini Alnauri" },
-//     { field: "NIM", value: "3312301018" },
-//     { field: "Jurusan", value: "Teknik Informatika" },
-//     { field: "Universitas", value: "Politeknik Negeri Batam" },
-//   ];
-//   return (
-//     <div>
-//       <h2>Biodata Mahasiswa (Tabel)</h2>
-//       <table border="1" cellpadding="10">
-//         <thead>
-//           <tr>
-//             <th>Field</th>
-//             <th>Value</th>
-//           </tr>
-//         </thead>
-//         <tbody>
-//           {biodataArray.map((item, index) => (
-//             <tr key={index}>
-//               <td>{item.field}</td>
-//               <td>{item.value}</td>
-//             </tr>
-//           ))}
-//         </tbody>
-//       </table>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React from "react";
 import {
   AppBar,
@@ -66,7 +8,7 @@ import {
   Box,
   Grid,
 } from "@mui/material";
-import logo from "./logo.svg";
+import logo from "./bloomburry.png";
 import { Routes, Route, Link as RouterLink } from "react-router-dom";
 import Produk from "./Produk";
 import Tentang from "./Tentang";
@@ -74,10 +16,10 @@ import Tentang from "./Tentang";
 function Layout() {
   return (
     <div
-      style={{ display: "flex", 
-        flexDirection: "column", 
+      style={{
+        display: "flex",
+        flexDirection: "column",
         minHeight: "100vh",
-      
       }}
     >
       <AppBar position="static" color="transparent">
@@ -86,7 +28,7 @@ function Layout() {
             <img
               src={logo}
               alt="logo"
-              style={{ height: "40px", margimRight: "16px" }}
+              style={{ height: "50px", marginRight: "16px" }}
             />
           </Typography>
           <Button component={RouterLink} to="/" color="inherit">
@@ -95,7 +37,7 @@ function Layout() {
           <Button component={RouterLink} to="/produk" color="inherit">
             Produk
           </Button>
-          <Button component={RouterLink} to="/Tentang" color="inherit">
+          <Button component={RouterLink} to="/tentang" color="inherit">
             Tentang
           </Button>
         </Toolbar>
@@ -106,9 +48,41 @@ function Layout() {
             path="/"
             element={
               <Box mt={5}>
-                <Typography variant="h4" gutterBottom>
-                  Selamat Datang di Website Kami
-                </Typography>
+                <Grid container spacing={4}>
+                  <Grid item xs={12} md={6}>
+                    <img
+                      src="https://images.unsplash.com/photo-1459662784036-fb86bbf1104f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
+                      alt="Gambar Deskripsi"
+                      style={{
+                        width: "100%", // Menyesuaikan gambar dengan lebar kontainer
+                        maxWidth: "500px", // Mengatur ukuran maksimal gambar
+                        height: "auto",
+                        display: "block",
+                        margin: "0 auto 20px auto", // Menambahkan margin bawah
+                      }}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <Typography variant="h2">
+                      Bloomsbury
+                    </Typography>
+                    <Typography variant="body1">
+                      Bunga-bunga indah yang menentang laju waktu yang tak
+                      henti-hentinya dan menantang gagasan yang tak terucapkan
+                      tentang hadiah yang sementara. Bloomsbury mengkhususkan diri
+                      dalam seni pengawetan bunga yang luar biasa dan terencana,
+                      praktik yang menarik dengan akar yang menelusuri kembali
+                      ke sejarah kuno. Bunga-bunga awetan kami yang dikeringkan
+                      dan dirawat dengan hati-hati hadir dalam berbagai bentuk:
+                      siluet mungil, toples kaca pedesaan, karangan bunga besar,
+                      vas yang canggih, dan kotak-kotak yang unik. Tersedia
+                      dalam berbagai warna dan komposisi, sempurna sebagai
+                      hiasan utama atau sebagai aksen, bunga-bunga yang kuat ini
+                      siap untuk bertahan seumur hidup bersama Anda atau orang
+                      spesial Anda.
+                    </Typography>
+                  </Grid>
+                </Grid>
               </Box>
             }
           />
@@ -118,7 +92,7 @@ function Layout() {
       </Container>
       <Box
         component="footer"
-        sx={{ bgcolor: "#548be3", color: "#fff", py: 3, mt: "auto" }}
+        sx={{ bgcolor: "#f5b5d3", color: "#fff", py: 3, mt: "auto" }}
       >
         <Container>
           <Grid container spacing={4}>
@@ -127,9 +101,9 @@ function Layout() {
                 Alamat
               </Typography>
               <Typography variant="body2">
-                Jl. Contoh No. 123
+                Jl. Gajah Mada No. 123
                 <br />
-                Kota, Negara 12345
+                Kota, Batam, Kepulauan Riau
                 <br />
                 Telepon: (123) 456-7890
               </Typography>
@@ -138,10 +112,43 @@ function Layout() {
               <Typography variant="h6" gutterBottom>
                 Quick Links
               </Typography>
+              <Typography
+                variant="body2"
+                component={RouterLink}
+                to="/"
+                color="white"
+              >
+                Beranda
+                <br />
+              </Typography>
+              <Typography
+                variant="body2"
+                component={RouterLink}
+                to="produk"
+                color="white"
+              >
+                Produk
+                <br />
+              </Typography>
+              <Typography
+                variant="body2"
+                component={RouterLink}
+                to="tentang"
+                color="white"
+              >
+                Tentang
+              </Typography>
             </Grid>
             <Grid item xs={12} md={4}>
               <Typography variant="h6" gutterBottom>
                 Find on Us
+              </Typography>
+              <Typography variant="body2">
+                Facebook: Bloomsbury
+                <br />
+                Instagram: @Bloomsbury.id
+                <br />
+                Email: Bloomsbury@gmail.com
               </Typography>
             </Grid>
           </Grid>
