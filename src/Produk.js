@@ -6,14 +6,21 @@ import {
   CardContent,
   CardMedia,
   CardActionArea,
+  Button,
 } from "@mui/material";
 
 function Produk() {
   return (
-    <Grid container spacing={14} justifyContent="center" alignItems="center">
+    <div>
+      {/* Judul Produk Kami */}
+      <Typography variant="h4" align="center" gutterBottom>
+        Produk Kami
+      </Typography>
+
+    <Grid container spacing={14} justifyContent="center" alignItems="center" padding={"20px"}>
       {/* Card 1 */}
       <Grid item xs={4}>
-        <Card sx={{ maxWidth: 300, marginTop: "20px" }}>
+        <Card sx={{ maxWidth: 300, marginTop: "20px"}}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -32,6 +39,14 @@ function Produk() {
                 seperti banyak kultivar tulip lainnya.
               </Typography>
             </CardContent>
+            <Button
+                  size="small"
+                  variant="contained"
+                  color="primary"
+                  sx={{ m: 2 }}
+                >
+                  Beli Sekarang
+                </Button>
           </CardActionArea>
         </Card>
       </Grid>
@@ -57,6 +72,14 @@ function Produk() {
                 seperti banyak kultivar tulip lainnya.
               </Typography>
             </CardContent>
+            <Button
+                  size="small"
+                  variant="contained"
+                  color="primary"
+                  sx={{ m: 2 }}
+                >
+                  Beli Sekarang
+                </Button>
           </CardActionArea>
         </Card>
       </Grid>
@@ -82,10 +105,19 @@ function Produk() {
                 seperti banyak kultivar tulip lainnya.
               </Typography>
             </CardContent>
+            <Button
+                  size="small"
+                  variant="contained"
+                  color="primary"
+                  sx={{ m: 2 }}
+                >
+                  Beli Sekarang
+                </Button>
           </CardActionArea>
         </Card>
       </Grid>
     </Grid>
+    </div>
   );
 }
 

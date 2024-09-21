@@ -8,7 +8,7 @@ function Tentang() {
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
             <img
-              src="https://images.unsplash.com/photo-1504693346549-cbdefa9bb5ef?q=80&w=1577&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://developers.google.com/static/codelabs/maps-platform/maps-platform-101-js/img/e52623cb8578d625.png?hl=id"
               alt="Gambar Deskripsi"
               style={{
                 width: "100%",
